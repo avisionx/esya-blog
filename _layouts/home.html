@@ -2,33 +2,25 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="container d-flex align-items-center" style="height: 100vh;">
+  <div class="d-inline w-100">  
+    <div class="row justify-content-center">
+      <div class="col">
+        <img src="{{ '/assets/logo.png' | relative_url }}">
+        <h1 class="text-center">ESYA'19</h1>
+        <p>Techfusion - Tracing the Distant</p>
+        <h4>COMING SOON</h4>
+        <div class="timer">
+          <div data-ng-text="DAYS">35</div>
+          <div data-ng-text="HOURS">16</div>
+          <div data-ng-text="MINUTES">56</div>
+          <div data-ng-text="SECONDS">15</div>
+        </div>
+        <div class="btn btn-small btn-dark">Follow us for updates now!</div>
+      </div>
+    </div>
+  </div>
+</div>  
 
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
