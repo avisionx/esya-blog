@@ -5,18 +5,18 @@ layout: default
 <div class="container d-flex align-items-center" style="height: 100vh;">
   <div class="d-inline w-100">  
     <div class="row justify-content-center">
-      <div class="col">
-        <img src="{{ '/assets/logo.png' | relative_url }}">
-        <h1 class="text-center">ESYA'19</h1>
-        <p>Techfusion - Tracing the Distant</p>
-        <h4>COMING SOON</h4>
-        <div class="timer">
-          <div data-ng-text="DAYS">35</div>
-          <div data-ng-text="HOURS">16</div>
-          <div data-ng-text="MINUTES">56</div>
-          <div data-ng-text="SECONDS">15</div>
+      <div class="col-12 col-md-6 text-center">
+        <img src="{{ '/assets/logo.png' | relative_url }}" class="w-50 mb-3">
+        <h1 class="text-center mb-0" style="letter-spacing: 10px">ESYA'<span class="font-weight-light" style="margin-right: -10px; font-weight: 100;">19</span></h1>
+        <p class="text-center" style="font-weight: 300;">Techfusion - Tracing the Distant</p>
+        <h1 class="font-weight-bold" style="letter-spacing: 2px; margin-right: -2px; font-size: 3em;">COMING SOON</h1>
+        <div class="timer d-flex justify-content-center mt-4">
+          <p data-label="DAYS" class=" p-2 font-weight-bold m-2">35</p>
+          <p data-label="HOURS" class=" p-2 font-weight-bold m-2">16</p>
+          <p data-label="MINUTES" class=" p-2 font-weight-bold m-2">56</p>
+          <p data-label="SECONDS" class=" p-2 font-weight-bold m-2">15</p>
         </div>
-        <div class="btn btn-small btn-dark">Follow us for updates now!</div>
+        <div class="btn btn-small btn-outline-light btn-custom mt-3 p-2 px-4">Follow us for updates now!</div>
       </div>
     </div>
   </div>
