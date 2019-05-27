@@ -27,7 +27,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://esya.iiitd.edu.in" # the base hostname & protocol for your site, e.g. http://example.com
 
 facebook_username:  EsyaIIITD
-instagram_username: esya_iitd
+instagram_username: esya_iiitd
+
+google_analytics: UA-140913461-1
 
 # Build settings
 markdown: kramdown
