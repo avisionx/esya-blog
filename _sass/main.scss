@@ -11,6 +11,19 @@ html, body {
 	color: white;
 }
 
+.social a{
+  text-decoration: none;
+  padding: 5px;
+  color:#303030;
+  text-align: center;
+  transition: 0.4s all;
+  cursor: pointer;
+  border: solid;
+  border-width: 1.4px;
+  border-color: #D3D3D3;
+  border-radius: 25px;
+}
+
 .timer > p {
 	background-color: white;
 	color: black;

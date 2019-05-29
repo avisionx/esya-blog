@@ -38,6 +38,9 @@ layout: default
   </div>
 </div>  
 
+	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+
+
 <div class="modal fade text-dark" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content px-2">
@@ -46,7 +49,14 @@ layout: default
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="{{ '/assets/close.svg' | relative_url }}"></span>
         </button>
-        
+
+        <h5 class="mb-3" style="color: #564897">Follow us on social media!</h5>
+	<div class="social">
+       		<a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration: none;" class="fa fa-facebook"></a>
+		&nbsp&nbsp
+        	<a href="https://www.instagram.com/{{ site.instagram_username }}"  target="_blank" style="text-decoration: none;" class="fa fa-instagram"></a>
+	</div>
+		<h5 class="my-3" style="color: #564897">Subscribe for updates!</h5>
         <h3 class="mt-5 mb-1 text-center" style="color: #564897">Subscribe for updates!</h3>
         <p class="text-center font-weight-light">and never miss an update about <br class="d-inline d-md-none"> your event!</p>
         <form class="form-group">
@@ -124,6 +134,7 @@ layout: default
   
   }
 
+<<<<<<< HEAD
   function showBlogs(event) {
     event.preventDefault();
     const element =  document.querySelector('.landingPageContainer');
@@ -134,3 +145,6 @@ layout: default
   }
 
 </script>
+=======
+</script>
+>>>>>>> 4ed76a8d157f6b3a2a9f104098e7692f85df1c40
