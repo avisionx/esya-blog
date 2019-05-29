@@ -2,9 +2,25 @@
 layout: default
 ---
 
+<style type="text/css">
+  body {
+    background-color: black;
+  }
+</style>
+
+<div class="container-fluid landingPageContainer" id="landingPage">
 <div class="container d-flex align-items-center" style="height: 100vh;">
+  
+  <a href="{{ '/blogs' | relative_url }}" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
+
+  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="{{ '/blogs' | relative_url }}" onclick="showBlogs(event);">
+    R<br> E<br> A<br> D<br> 
+    &nbsp;<br> 
+    B<br> L<br> O<br> G<br> S 
+  </a>
+
   <div class="d-inline w-100">  
-    <div class="row justify-content-center">
+    <div class="row justify-content-center animated fadeInDown">
       <div class="col-12 col-md-5 text-center">
         <img src="{{ '/assets/logo.png' | relative_url }}" class="w-50 mb-3">
         <h1 class="text-center mb-0" style="letter-spacing: 10px">ESYA'<span class="font-weight-light" style="margin-right: -10px; font-weight: 200;">19</span></h1>
@@ -16,7 +32,7 @@ layout: default
           <p data-label="MINUTES" class="p-1 font-weight-bold m-2" id="timer_minutes">00</p>
           <p data-label="SECONDS" class="p-1 font-weight-bold m-2" id="timer_seconds">00</p>
         </div>
-        <div class="btn btn-small btn-outline-light btn-custom mt-3 p-2 px-4" data-toggle="modal" data-target="#modalCenter">Follow us for updates now!</div>
+        <div class="btn btn-small btn-outline-light btn-custom mt-5 p-2 px-4" data-toggle="modal" data-target="#modalCenter">Follow us for updates now!</div>
       </div>
     </div>
   </div>
@@ -25,16 +41,14 @@ layout: default
 <div class="modal fade text-dark" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content px-2">
-      <div class="modal-body">
+      <div class="modal-body pb-5">
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="{{ '/assets/close.svg' | relative_url }}"></span>
         </button>
-        <h5 class="mb-3" style="color: #564897">Follow us on social media!</h5>
-        <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration: none;" class="text-dark pl-0 pl-md-3">facebook <span aria-hidden="true"><img src="{{ '/assets/arrow.svg' | relative_url }}"></span></a>
-        <br>
-        <a href="https://www.instagram.com/{{ site.instagram_username }}"  target="_blank" style="text-decoration: none;" class="text-dark pl-0 pl-md-3">instagram <span aria-hidden="true"><img src="{{ '/assets/arrow.svg' | relative_url }}"></span></a>
-        <h5 class="my-3" style="color: #564897">Subscribe for updates!</h5>
         
+        <h3 class="mt-5 mb-1 text-center" style="color: #564897">Subscribe for updates!</h3>
+        <p class="text-center font-weight-light">and never miss an update about <br class="d-inline d-md-none"> your event!</p>
         <form class="form-group">
           <div class="input-group mb-3">
             <input type="email" class="form-control" id="emailInput" placeholder="Email Address">
@@ -44,19 +58,20 @@ layout: default
           </div>
         </form>
 
+        <h4 class="mt-4 mb-3 text-center" style="color: #564897">Follow us on social media!</h4>
+        <div class="row">
+          <div class="col text-center">
+            <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration: none;" class="text-dark pl-0 pl-md-3"><img src="{{ '/assets/facebook-logo.svg' | relative_url }}" height="30px"></a>
+            <a href="https://www.instagram.com/{{ site.instagram_username }}"  target="_blank" style="text-decoration: none;" class="text-dark pl-2 pl-md-3"><img src="{{ '/assets/instagram-logo.svg' | relative_url }}" height="30px"></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-
+</div>
 <script type="text/javascript">
-  
+
   var firebaseConfig = {
     apiKey: "AIzaSyATZjl_7bv8ohTFN24GWU7e1lYNUm5opIY",
     authDomain: "esya19-2ec08.firebaseapp.com",
@@ -107,6 +122,15 @@ layout: default
       });
     }
   
+  }
+
+  function showBlogs(event) {
+    event.preventDefault();
+    const element =  document.querySelector('.landingPageContainer');
+    element.classList.add('animated', 'slideOutLeft');
+    element.addEventListener('animationend', function() { 
+      window.location.pathname = '/blogs';
+    });
   }
 
 </script>

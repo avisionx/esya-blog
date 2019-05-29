@@ -4,7 +4,7 @@ html, body {
 	font-family: 'Kanit', sans-serif;
 }
 
-body {
+#landingPage {
 	background: linear-gradient(0deg, rgba(244,59,71,0.8) 0%, rgba(69,58,148,0.8) 100%), url('./bg.JPG');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -33,4 +33,33 @@ body {
 	border-radius: 20px;
 	color: white !important;
 	background-color: #564897 !important;
+}
+
+.btn-custom2 {
+	font-size: 11px;
+	border-radius: 20px;
+	color: black !important;
+	background-color: white !important;
+	position: absolute; 
+	top: 20px; 
+	right: 15px;
+}
+
+.side-text {
+	font-size: 11px; 
+	color: white !important; 
+	position: absolute; 
+	top: 40%; 
+	right: 30px; 
+}
+
+.loader {
+	z-index: 999;
+	background-color: black;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	position: absolute;
 }
