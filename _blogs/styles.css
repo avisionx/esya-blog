@@ -1,0 +1,435 @@
+/* 
+** Layout, Text & Colors 
+*/
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+/*
+changed
+*/
+.anim-typewriter{
+  animation: typewriter 2.5s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 4em;}
+  }
+  @keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+  }
+/*
+centering the card
+*/
+.centrecard {
+	width: 100px;
+	height: 100px;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	margin: auto;
+}
+
+
+
+body {
+  background: linear-gradient(#453A94,#F43B47);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modalcontent{
+  color:white;
+}
+.modaltextbehind{
+  background: linear-gradient(#453A94,#F43B47);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 19.5%;
+  padding: 0 10px;
+  transform: rotate(-30deg) translateY(170px) translateX(-40px);
+  }
+.column2 {
+  float: left;
+  width: 19.5%;
+  padding: 0 10px;
+  transform: rotate(-15deg) translateY(50px);
+}
+.column3 {
+  float: left;
+  width: 19.5%;
+  padding: 0 10px;
+}
+.column4 {
+  float: left;
+  width: 19.5%;
+  padding: 0 10px;
+  transform: rotate(15deg) translateY(50px);
+
+}
+.column5 {
+  float: left;
+  width: 19.5%;
+  padding: 0 10px;
+  transform: rotate(30deg) translateY(170px)  translateX(40px);
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 400px;
+  transition: all 100ms ease-in;
+  transform: scale(1);
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.card:hover{
+  background:linear-gradient(#453A94,#F43B47);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+  z-index: 1;
+  -webkit-text-fill-color: #fff;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* Cards */
+/*.card-column {
+  width: 50%;
+  float: left;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.column-1 {
+  padding-top: 100px;
+}
+*/
+/*.card {
+  border-radius: 25px;
+  width: 92%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #EB5160;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: all 100ms ease-in;
+    transform: scale(1);
+}
+
+
+.card:hover {
+  box-shadow: 3px 2px 40px #474747;
+  border-radius: 25px;
+  width: 92%;
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+  max-width: 340px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+*/
+
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+  display: none;
+}
+
+.card h1 {
+  position: relative;
+  padding: 190px 0px 100px 10px;
+  width: 100%;
+
+}
+
+.card > img {
+  width: 90%;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  border-radius: 10px;
+}
+
+/* The cover (expanding background) */
+.cover {
+  position: fixed;
+  background: #EB5160;
+  z-index: 100;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+/* The open page content */
+.open-content {
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open-content img {
+  position: relative;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.open-content .text {
+  background: #fff;
+  margin-top: -56%;
+  padding: 60% 5% 5% 5%;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.open-content .text h1, .open-content .text p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-content {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-content span {
+  background: #222;
+  width: 30px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 14px;
+}
+
+.x-1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.x-2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* 
+** Transitions
+*/
+
+.card {
+  transition: opacity 200ms linear 320ms, -webkit-transform 200ms ease-out 320ms;
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms, -webkit-transform 200ms ease-out 320ms;
+}
+
+.border {
+  transition: opacity 200ms linear, -webkit-transform 200ms ease-out;
+  transition: opacity 200ms linear, transform 200ms ease-out;
+  transition: opacity 200ms linear, transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.card img {
+  transition: opacity 200ms linear 0ms, -webkit-transform 200ms ease-in 0ms;
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms, -webkit-transform 200ms ease-in 0ms;
+}
+
+.card h1 {
+  -webkit-transform: translate3d(20%, 0px, 0px);
+          transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, -webkit-transform 200ms ease-in 120ms;  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms, -webkit-transform 200ms ease-in 120ms;
+}
+
+/* Clicked card */
+.card.clicked img {
+  -webkit-transform: translate3d(0px, -40px, 0px);
+          transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.clicked .border {
+  opacity: 0;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.card.out, .card.out img {
+  -webkit-transform: translate3d(0px, -40px, 0px);
+          transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.out h3, .card.clicked h3 {
+  -webkit-transform: translate3d(0, -40px, 0px);
+          transform: translate3d(0, -40px, 0px);
+  opacity: 0;
+}
+
+.cover {
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.open-content {
+  transition: opacity 200ms linear 0ms;
+}
+
+.open-content.open {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 1000ms;
+}
+
+/* 
+** Media Queries
+*/
+
+@media screen and (max-width: 600px) {
+   .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+        transform: rotate(0deg);
+
+  }
+    .column2{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    transform: rotate(0deg);
+  }
+    .column3 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    transform: rotate(0deg);
+  }
+
+      .column3:hover {
+    width: 100%;
+    display: block;
+    /* margin-bottom: 20px; */
+
+    transform: rotate(0deg);
+
+  }
+    .column4 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+        transform: rotate(0deg);
+
+  }
+    .column5 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    transform: rotate(0deg);
+
+  }
+  
+  .open-content img {
+    margin-top: 40px;
+  }
+
+  .centrecard {
+    /* width: 100px;
+    height: 100px; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .centrecard {
+    /* width: 100px;
+    height: 100px; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
