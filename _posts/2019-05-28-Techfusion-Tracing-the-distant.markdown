@@ -1,7 +1,7 @@
 ---
 layout:	post
 title:	"Techfusion: Tracing the distant"
-date:	2019-05-27 
+date:	2019-05-28
 categories: blog
 author:	Kshitij Agrawal
 img_url: bg.JPG

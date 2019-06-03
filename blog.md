@@ -24,15 +24,15 @@ permalink: /blog
 					</div>
 				</div>
 				<div class="row">
-					{% for post in site.posts %}
+					{% for post in site.posts reversed %}
 					<div class="col-12 col-md-4 my-4 my-md-5">
-						<a class="card rounded shadow-sm text-dark p-3" href="#{{ forloop.index }}" onclick="updateUrl(this.href)" data-toggle="modal" data-target="#{{ forloop.index }}" style="text-decoration: none; height: 445px;">
+						<a class="card rounded shadow-sm text-dark p-3" href="#{{ forloop.index }}" onclick="updateUrl(this.href)" data-toggle="modal" data-target="#{{ forloop.index }}" style="text-decoration: none;">
 							<div class="card-body p-0 rounded">
 								<img src="{{ '/assets/' | relative_url }}{{ post.img_url }}" class="card-img-top">
 								<h5 class="card-title font-weight-bold text-dark pt-3 mb-1">{{ post.title }}</h5>
 								{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         						<p class="card-title text-secondary small mb-1 font-weight-light" style="font-size: 10px"><i class="fas fa-calendar-day"></i> {{ post.date | date: date_format }}</p>
-								<p class="font-weight-light mb-1">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+								<p class="font-weight-light mb-3">{{ post.excerpt | remove: '<p>' | remove: '</p>' | truncatewords: 25}}</p>
 								<p class="font-weight-light text-info small mb-0 text-center">Continue Reading</p>
 							</div>
 						</a>
@@ -87,7 +87,9 @@ permalink: /blog
 	});
 
 	function updateUrl(url) {
-		document.location.href += "#" + url.split("#")[1];
+
+    	var webUrl = document.location.href;
+		document.location.href = webUrl.split("#")[0] + "#" + url.split("#")[1];
 	}
 
 </script>
