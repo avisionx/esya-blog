@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://esya.iiitd.edu.in/" />
 <meta property="og:site_name" content="ESYA’19" />
 <script type="application/ld+json">
-{"url":"http://esya.iiitd.edu.in/","name":"ESYA’19","headline":"ESYA’19","description":"Esya’19 Themed: ‘Techfusion - Tracing the Distant’ We intend to very generously yet mindfully inculcate multiple horizons and step beyond the four definite walls to let everything from design to society to the human anatomy add their own flavour to the fest.","@type":"WebSite","@context":"https://schema.org"}</script>
+{"headline":"ESYA’19","url":"http://esya.iiitd.edu.in/","name":"ESYA’19","description":"Esya’19 Themed: ‘Techfusion - Tracing the Distant’ We intend to very generously yet mindfully inculcate multiple horizons and step beyond the four definite walls to let everything from design to society to the human anatomy add their own flavour to the fest.","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://esya.iiitd.edu.in/feed.xml" title="ESYA'19" /></head>
 <body>
@@ -34,9 +34,9 @@
 <div class="container-fluid landingPageContainer" id="landingPage">
 <div class="container d-flex align-items-center" style="height: 100vh;">
   
-  <a href="/blogs" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
+  <a href="/blog" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
 
-  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="/blogs" onclick="showBlogs(event);">
+  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="/blog" onclick="showBlogs(event);">
     R<br> E<br> A<br> D<br> 
     &nbsp;<br> 
     B<br> L<br> O<br> G<br> S 
@@ -61,6 +61,9 @@
   </div>
 </div>  
 
+	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+
+
 <div class="modal fade text-dark" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content px-2">
@@ -69,7 +72,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="/assets/close.svg"></span>
         </button>
-        
+
+        <h5 class="mb-3" style="color: #564897">Follow us on social media!</h5>
+	<div class="social">
+       		<a href="https://www.facebook.com/EsyaIIITD" target="_blank" style="text-decoration: none;" class="fa fa-facebook"></a>
+		&nbsp&nbsp
+        	<a href="https://www.instagram.com/esya_iiitd"  target="_blank" style="text-decoration: none;" class="fa fa-instagram"></a>
+	</div>
+		<h5 class="my-3" style="color: #564897">Subscribe for updates!</h5>
         <h3 class="mt-5 mb-1 text-center" style="color: #564897">Subscribe for updates!</h3>
         <p class="text-center font-weight-light">and never miss an update about <br class="d-inline d-md-none"> your event!</p>
         <form class="form-group">
@@ -152,10 +162,11 @@
     const element =  document.querySelector('.landingPageContainer');
     element.classList.add('animated', 'slideOutLeft');
     element.addEventListener('animationend', function() { 
-      window.location.pathname = '/blogs';
+      window.location.pathname = '/blog';
     });
   }
 
-</script></body>
+</script>
+</body>
 
 </html>

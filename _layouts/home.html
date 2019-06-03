@@ -11,9 +11,9 @@ layout: default
 <div class="container-fluid landingPageContainer" id="landingPage">
 <div class="container d-flex align-items-center" style="height: 100vh;">
   
-  <a href="{{ '/blogs' | relative_url }}" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
+  <a href="{{ '/blog' | relative_url }}" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
 
-  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="{{ '/blogs' | relative_url }}" onclick="showBlogs(event);">
+  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="{{ '/blog' | relative_url }}" onclick="showBlogs(event);">
     R<br> E<br> A<br> D<br> 
     &nbsp;<br> 
     B<br> L<br> O<br> G<br> S 
@@ -134,17 +134,13 @@ layout: default
   
   }
 
-<<<<<<< HEAD
   function showBlogs(event) {
     event.preventDefault();
     const element =  document.querySelector('.landingPageContainer');
     element.classList.add('animated', 'slideOutLeft');
     element.addEventListener('animationend', function() { 
-      window.location.pathname = '/blogs';
+      window.location.pathname = '/blog';
     });
   }
 
 </script>
-=======
-</script>
->>>>>>> 4ed76a8d157f6b3a2a9f104098e7692f85df1c40
