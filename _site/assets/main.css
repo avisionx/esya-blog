@@ -10248,11 +10248,11 @@ html, body {
   right: 15px; }
 
 .side-text {
-  font-size: 11px;
+  font-size: 15px;
   color: white !important;
   position: absolute;
   top: 40%;
-  right: 30px; }
+  right: 40px; }
 
 .loader {
   z-index: 999;

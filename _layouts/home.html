@@ -13,7 +13,7 @@ layout: default
   
   <a href="{{ '/blog' | relative_url }}" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
 
-  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="{{ '/blog' | relative_url }}" onclick="showBlogs(event);">
+  <a class="btn p-1 px-2 d-none d-md-inline side-text animated fadeInRight delay-1s" href="{{ '/blog' | relative_url }}" onclick="showBlogs(event);">
     R<br> E<br> A<br> D<br> 
     &nbsp;<br> 
     B<br> L<br> O<br> G<br> S 
@@ -45,18 +45,9 @@ layout: default
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content px-2">
       <div class="modal-body pb-5">
-        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="{{ '/assets/close.svg' | relative_url }}"></span>
         </button>
-
-        <h5 class="mb-3" style="color: #564897">Follow us on social media!</h5>
-	<div class="social">
-       		<a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank" style="text-decoration: none;" class="fa fa-facebook"></a>
-		&nbsp&nbsp
-        	<a href="https://www.instagram.com/{{ site.instagram_username }}"  target="_blank" style="text-decoration: none;" class="fa fa-instagram"></a>
-	</div>
-		<h5 class="my-3" style="color: #564897">Subscribe for updates!</h5>
         <h3 class="mt-5 mb-1 text-center" style="color: #564897">Subscribe for updates!</h3>
         <p class="text-center font-weight-light">and never miss an update about <br class="d-inline d-md-none"> your event!</p>
         <form class="form-group">

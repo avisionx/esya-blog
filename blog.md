@@ -20,7 +20,7 @@ permalink: /blog
 			<div class="col">
 				<div class="row text-center mt-4">
 					<div class="col">
-						<h1 class="text-center text-light font-weight-bold">Blogs</h1>
+						<h1 class="text-center text-light font-weight-bold display-4">Blogs</h1>
 					</div>
 				</div>
 				<div class="row">

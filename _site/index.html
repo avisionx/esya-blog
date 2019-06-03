@@ -22,10 +22,10 @@
 <body>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-	
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+  	
     <style type="text/css">
   body {
     background-color: black;
@@ -37,7 +37,7 @@
   
   <a href="/blog" class="btn btn-small btn-outline-light btn-custom2 p-1 px-2 font-weight-light d-inline d-md-none animated fadeIn delay-1s" onclick="showBlogs(event);">Read Blogs!</a>
 
-  <a class="btn p-1 px-2 font-weight-light d-none d-md-inline side-text animated fadeInRight delay-1s" href="/blog" onclick="showBlogs(event);">
+  <a class="btn p-1 px-2 d-none d-md-inline side-text animated fadeInRight delay-1s" href="/blog" onclick="showBlogs(event);">
     R<br> E<br> A<br> D<br> 
     &nbsp;<br> 
     B<br> L<br> O<br> G<br> S 
@@ -69,18 +69,9 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content px-2">
       <div class="modal-body pb-5">
-        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="/assets/close.svg"></span>
         </button>
-
-        <h5 class="mb-3" style="color: #564897">Follow us on social media!</h5>
-	<div class="social">
-       		<a href="https://www.facebook.com/EsyaIIITD" target="_blank" style="text-decoration: none;" class="fa fa-facebook"></a>
-		&nbsp&nbsp
-        	<a href="https://www.instagram.com/esya_iiitd"  target="_blank" style="text-decoration: none;" class="fa fa-instagram"></a>
-	</div>
-		<h5 class="my-3" style="color: #564897">Subscribe for updates!</h5>
         <h3 class="mt-5 mb-1 text-center" style="color: #564897">Subscribe for updates!</h3>
         <p class="text-center font-weight-light">and never miss an update about <br class="d-inline d-md-none"> your event!</p>
         <form class="form-group">
