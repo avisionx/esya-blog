@@ -10247,12 +10247,11 @@ html, body {
   top: 20px;
   right: 15px; }
 
-.side-text {
-  font-size: 15px;
+.side-pill {
   color: white !important;
   position: absolute;
   top: 40%;
-  right: 40px; }
+  right: 60px; }
 
 .loader {
   z-index: 999;
